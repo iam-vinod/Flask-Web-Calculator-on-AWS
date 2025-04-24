@@ -5,18 +5,18 @@
 .
 ├── .github/
 │   └── workflows/
-│       └── ci-cd.yml         # GitHub Actions workflow for CI/CD
+│       └── ci-cd.yml         
 ├── app/
-│   ├── app.py                # Main Python application
+│   ├── app.py               
 │   └── templates/
-│       └── index.html        # HTML template for rendering
+│       └── index.html        
 ├── terraform/
-│   ├── main.tf               # Terraform main configuration
-│   ├── outputs.tf            # Terraform output definitions
-│   └── variables.tf          # Terraform variables
-├── Dockerfile                # Docker image definition
-├── requirements.txt          # Python dependencies
-└── README.md                 # Project documentation
+│   ├── main.tf               
+│   ├── outputs.tf            
+│   └── variables.tf          
+├── Dockerfile                
+├── requirements.txt          
+└── README.md                 
 
 🚀 Getting Started
 These instructions will get your project up and running locally and in production using Docker and Terraform.
@@ -58,4 +58,30 @@ docker run -p 8080:5000 my-python-app
 3. Access the app in your browser
 
 http://localhost:8080
+
+☁️ Deploy with Terraform
+
+1. Navigate to the Terraform directory
+
+cd terraform
+
+2. Initialize Terraform
+
+terraform init
+
+3.Plan the infrastructure
+
+terraform plan
+
+4. Apply the configuration
+
+terraform apply
+
+🔄 CI/CD Pipeline
+
+A GitHub Actions workflow is configured at .github/workflows/ci-cd.yml
+
+Automatically triggers builds, tests, and deployments on push to main.
+
+
 
