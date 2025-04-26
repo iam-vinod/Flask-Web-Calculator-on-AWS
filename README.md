@@ -3,7 +3,7 @@ A simple, lightweight Flask-based calculator application deployed on AWS EC2 usi
 This project demonstrates containerization, Infrastructure as Code (IaC), and basic CI/CD automation via GitHub Actions.
 
 📁 Project Structure
-
+```
 .
 ├── .github/
 │   └── workflows/
@@ -20,6 +20,7 @@ This project demonstrates containerization, Infrastructure as Code (IaC), and ba
 ├── requirements.txt
 └── README.md
 
+```
 
 🚀 Getting Started
 These instructions will help you run the project locally and in production.
