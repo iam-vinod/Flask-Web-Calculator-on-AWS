@@ -1,87 +1,130 @@
-# Flask-Web-Calculator-on-AWS
+Flask Web Calculator on AWS
+A simple, lightweight Flask-based calculator application deployed on AWS EC2 using Docker and Terraform.
+This project demonstrates containerization, Infrastructure as Code (IaC), and basic CI/CD automation via GitHub Actions.
 
 📁 Project Structure
-
+css
+Copy
+Edit
 .
 ├── .github/
 │   └── workflows/
-│       └── ci-cd.yml         
+│       └── ci-cd.yml
 ├── app/
-│   ├── app.py               
+│   ├── app.py
 │   └── templates/
-│       └── index.html        
+│       └── index.html
 ├── terraform/
-│   ├── main.tf               
-│   ├── outputs.tf            
-│   └── variables.tf          
-├── Dockerfile                
-├── requirements.txt          
-└── README.md                 
-
+│   ├── main.tf
+│   ├── outputs.tf
+│   └── variables.tf
+├── Dockerfile
+├── requirements.txt
+└── README.md
 🚀 Getting Started
-These instructions will get your project up and running locally and in production using Docker and Terraform.
+These instructions will help you run the project locally and in production.
 
 📦 Prerequisites
 Python 3.x
+
 Docker
+
 Terraform
+
 AWS CLI
 
-⚙️ Installation & Local Setup
+⚙️ Local Setup
+Clone the repository
 
-1.Clone the repository
+bash
+Copy
+Edit
+git clone https://github.com/iam-vinod/Flask-Web-Calculator-on-AWS.git
+cd Flask-Web-Calculator-on-AWS
+Install dependencies
 
-git clone <your-repo-url>
-
-cd <your-repo-folder>
-
-2.Install dependencies
-
+bash
+Copy
+Edit
 pip install -r requirements.txt
+Run the application locally
 
-3. Run the application locally
+bash
+Copy
+Edit
+python app/app.py
+Open the app in your browser
 
-  python app/app.py
-
-4. Open in browser Visit http://localhost:5000 (or the port your app is set to use).
+Visit: http://localhost:5000
 
 🐳 Docker Usage
+Build the Docker image
 
-1. Build the Docker image
-
+bash
+Copy
+Edit
 docker build -t my-python-app .
+Run the container
 
-2. Run the container with port forwarding (host: 8080 → container: 5000)
-
+bash
+Copy
+Edit
 docker run -p 8080:5000 my-python-app
+Access the application
 
-3. Access the app in your browser
+Visit: http://localhost:8080
 
-http://localhost:8080
+☁️ Deploy on AWS with Terraform
+Navigate to the Terraform directory
 
-☁️ Deploy with Terraform
-
-1. Navigate to the Terraform directory
-
+bash
+Copy
+Edit
 cd terraform
+Initialize Terraform
 
-2. Initialize Terraform
-
+bash
+Copy
+Edit
 terraform init
+Plan the infrastructure
 
-3.Plan the infrastructure
-
+bash
+Copy
+Edit
 terraform plan
+Apply the configuration
 
-4. Apply the configuration
-
+bash
+Copy
+Edit
 terraform apply
+Access the deployed applications:
+
+API Calculator (port 5000): http://your-ec2-public-ip:5000
+
+Web GUI Calculator (port 8080): http://your-ec2-public-ip:8080
 
 🔄 CI/CD Pipeline
+A GitHub Actions workflow is configured at:
 
-A GitHub Actions workflow is configured at .github/workflows/ci-cd.yml
+bash
+Copy
+Edit
+.github/workflows/ci-cd.yml
+On every push to the main branch:
 
-Automatically triggers builds, tests, and deployments on push to main.
+Build Docker images
 
+Push to Docker Hub (or your private registry)
 
+Deploy updated containers to AWS EC2
 
+✅ Fully automated deployment pipeline!
+
+🎯 Summary:
+API runs on port 5000
+
+Web GUI runs on port 8080
+
+Fully Dockerized + Terraform Automated + GitHub Actions CI/CD ✅
