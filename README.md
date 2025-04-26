@@ -105,7 +105,6 @@ Deploy updated containers to AWS EC2
 
 ✅ Fully automated deployment pipeline!
 
-🎯 Summary:
 API runs on port 5000
 
 Web GUI runs on port 8080
