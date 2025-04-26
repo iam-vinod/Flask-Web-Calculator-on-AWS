@@ -3,9 +3,7 @@ A simple, lightweight Flask-based calculator application deployed on AWS EC2 usi
 This project demonstrates containerization, Infrastructure as Code (IaC), and basic CI/CD automation via GitHub Actions.
 
 📁 Project Structure
-css
-Copy
-Edit
+
 .
 ├── .github/
 │   └── workflows/
@@ -21,6 +19,8 @@ Edit
 ├── Dockerfile
 ├── requirements.txt
 └── README.md
+
+
 🚀 Getting Started
 These instructions will help you run the project locally and in production.
 
@@ -36,23 +36,20 @@ AWS CLI
 ⚙️ Local Setup
 Clone the repository
 
-bash
-Copy
-Edit
+
 git clone https://github.com/iam-vinod/Flask-Web-Calculator-on-AWS.git
+
 cd Flask-Web-Calculator-on-AWS
+
 Install dependencies
 
-bash
-Copy
-Edit
+
 pip install -r requirements.txt
+
 Run the application locally
 
-bash
-Copy
-Edit
 python app/app.py
+
 Open the app in your browser
 
 Visit: http://localhost:5000
@@ -60,16 +57,12 @@ Visit: http://localhost:5000
 🐳 Docker Usage
 Build the Docker image
 
-bash
-Copy
-Edit
 docker build -t my-python-app .
+
 Run the container
 
-bash
-Copy
-Edit
 docker run -p 8080:5000 my-python-app
+
 Access the application
 
 Visit: http://localhost:8080
@@ -77,28 +70,20 @@ Visit: http://localhost:8080
 ☁️ Deploy on AWS with Terraform
 Navigate to the Terraform directory
 
-bash
-Copy
-Edit
 cd terraform
+
 Initialize Terraform
 
-bash
-Copy
-Edit
 terraform init
+
 Plan the infrastructure
 
-bash
-Copy
-Edit
 terraform plan
+
 Apply the configuration
 
-bash
-Copy
-Edit
 terraform apply
+
 Access the deployed applications:
 
 API Calculator (port 5000): http://your-ec2-public-ip:5000
@@ -108,9 +93,6 @@ Web GUI Calculator (port 8080): http://your-ec2-public-ip:8080
 🔄 CI/CD Pipeline
 A GitHub Actions workflow is configured at:
 
-bash
-Copy
-Edit
 .github/workflows/ci-cd.yml
 On every push to the main branch:
 
