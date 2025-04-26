@@ -1,6 +1,0 @@
-.terraform/
-*.zip
-aws/
-git-filter-repo/
-vin.pem
-terraform/vin.pem
