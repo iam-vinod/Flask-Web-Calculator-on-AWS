@@ -26,6 +26,7 @@ This project demonstrates containerization, Infrastructure as Code (IaC), and ba
 These instructions will help you run the project locally and in production.
 
 📦 Prerequisites
+
 Python 3.x
 
 Docker
