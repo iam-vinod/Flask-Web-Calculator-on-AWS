@@ -86,6 +86,16 @@ Apply the configuration
 
 terraform apply
 
+Once deployed, Terraform will output the EC2 public IP address.
+
+🔐 SSH into EC2 Instance
+
+After deployment, connect to your EC2 instance:
+
+ssh -i path/to/your-key.pem ec2-user@<your-ec2-public-ip>
+
+Ensure your .pem file has proper permissions (chmod 400).
+
 Access the deployed applications:
 
 API Calculator (port 5000): http://your-ec2-public-ip:5000
@@ -93,10 +103,10 @@ API Calculator (port 5000): http://your-ec2-public-ip:5000
 Web GUI Calculator (port 8080): http://your-ec2-public-ip:8080
 
 🔄 CI/CD Pipeline
-A GitHub Actions workflow is configured at:
 
-.github/workflows/ci-cd.yml
-On every push to the main branch:
+A GitHub Actions workflow is configured at: 
+
+.github/workflows/ci-cd.yml On every push to the main branch:
 
 Build Docker images
 
