@@ -26,9 +26,9 @@ resource "aws_security_group" "web_sg" {
 }
 
 resource "aws_instance" "web" {
-  ami                    = "ami-065aeacd44e98d9ac"
+  ami                    = "ami-***************"
   instance_type          = "t2.micro"
-  key_name               = "vin"  # Your existing AWS key pair name
+  key_name               = "example"  # Your existing AWS key pair name
   vpc_security_group_ids = [aws_security_group.web_sg.id]
 
   tags = {
